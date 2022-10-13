@@ -1,13 +1,14 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import Navbar from '../components/Navbar'
 import Nourishment from './Nourishment'
 import ReservationForm from '../components/ReservationForm'
 import SignIn from './SignIn'
 import SignUp from './SignUp'
 import TransactionHistory from './TransactionHistory'
 import UserSettings from '../components/UserSettings'
+import HotelDetails from '../components/HotelDetails'
+import FoodDetails from '../components/FoodDetails'
 
 const Home: NextPage = () => {
   return (
@@ -19,13 +20,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <SignIn />
-        <SignUp />
-        <TransactionHistory />
-        <UserSettings />
-        <ReservationForm />
-        <Nourishment />
-  
+        
       </main>
 
       <footer>
