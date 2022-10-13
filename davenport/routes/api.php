@@ -6,6 +6,7 @@ use App\Http\Controllers;
 use App\Http\Controllers\CategoryRoomController;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +41,8 @@ Route::group([
     ], function() {
         Route::resource('/room', RoomController::class);
     });
+
+    Route::post('/contact', [ContactController::class, 'contact']);
 
 });
 
