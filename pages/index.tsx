@@ -3,11 +3,11 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Navbar from '../components/Navbar'
 import Nourishment from './Nourishment'
-import ReservationForm from './ReservationForm'
+import ReservationForm from '../components/ReservationForm'
 import SignIn from './SignIn'
 import SignUp from './SignUp'
 import TransactionHistory from './TransactionHistory'
-import UserSettings from './UserSettings'
+import UserSettings from '../components/UserSettings'
 
 const Home: NextPage = () => {
   return (
