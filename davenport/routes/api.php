@@ -7,6 +7,7 @@ use App\Http\Controllers\CategoryRoomController;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\HistoryTransactionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,7 +43,16 @@ Route::group([
         Route::resource('/room', RoomController::class);
     });
 
+    Route::group([
+        'prefix' => 'history',
+    ], function() {
+        Route::get('/{id}', [HistoryTransactionController::class, 'index']);
+        Route::post('/', [HistoryTransactionController::class, 'createInvoice']);
+        Route::put('/{id}', [HistoryTransactionController::class, 'updateInvoice']);
+    });
+
     Route::post('/contact', [ContactController::class, 'contact']);
+
 
 });
 
