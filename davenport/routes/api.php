@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
 use App\Http\Controllers\CategoryRoomController;
+use App\Http\Controllers\RoomController;
 use App\Http\Controllers\AuthController;
 
 /*
@@ -29,10 +30,15 @@ Route::group([
     });
 
     Route::group([
-        'prefix' => 'category',
+        // 'prefix' => 'category',
     ], function() {
-        Route::get  ('/', [CategoryRoomController::class, "index"]);
-        Route::resource('category', CategoryRoomController::class);
+        Route::resource('/category', CategoryRoomController::class);
+    });
+
+    Route::group([
+        // 'prefix' => 'room',
+    ], function() {
+        Route::resource('/room', RoomController::class);
     });
 
 });

@@ -7,10 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class RoomModel extends Model
 {
-    protected $table = 'category_room';
+    protected $table = 'room';
     use HasFactory;
 
     protected  $fillable = [
-        'category_name',
+        'room_name',
+        'room_short_description',
+        'room_description',
+        'room_image',
+        'room_price',
+        'room_stock',
+        'category_id',
     ];
 }
